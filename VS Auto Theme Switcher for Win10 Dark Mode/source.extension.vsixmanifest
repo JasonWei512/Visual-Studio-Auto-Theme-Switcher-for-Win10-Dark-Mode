@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.3fe15592-ed5f-4c66-999a-9c72770be7c0" Version="0.6" Language="en-US" Publisher="Nick John" />
+        <Identity Id="VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.3fe15592-ed5f-4c66-999a-9c72770be7c0" Version="0.7" Language="en-US" Publisher="Nick John" />
         <DisplayName>Auto Theme Switcher for Win10 Dark Mode</DisplayName>
         <Description xml:space="preserve">Automatically change your Visual Studio theme when switching Windows 10 light/dark theme.</Description>
         <MoreInfo>https://marketplace.visualstudio.com/items?itemName=NickJohn.AutoThemeSwitcherForWin10DarkMode</MoreInfo>
