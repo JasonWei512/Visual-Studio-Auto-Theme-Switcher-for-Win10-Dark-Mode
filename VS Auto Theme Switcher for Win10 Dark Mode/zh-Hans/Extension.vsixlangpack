@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageLanguagePackManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <DisplayName>自动匹配Win10亮暗主题</DisplayName>
+    <Description>当切换Win10亮/暗主题时，自动切换Visual Studio至相应的亮/暗主题。</Description>
+  </Metadata>
+</PackageLanguagePackManifest>
