@@ -17,11 +17,9 @@ namespace VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Logic
     {
         #region Constants
 
-        private static string WindowsThemeRegestryKeyName = @"HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize";
+        private const string WindowsThemeRegestryKeyName = @"HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize";
 
-        private static string WindowsThemeRegistryValueName = "AppsUseLightTheme";
-
-        private static string WindowsThemeRegistryFullPath = Path.Combine(WindowsThemeRegestryKeyName, WindowsThemeRegistryValueName);
+        private const string WindowsThemeRegistryValueName = "AppsUseLightTheme";
 
         #endregion
 
@@ -56,7 +54,9 @@ namespace VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Logic
                 }
                 else
                 {
-                    throw new NotSupportedException(Resources.Registry_value_not_found_ + "\n" + WindowsThemeRegistryFullPath);
+                    throw new NotSupportedException(
+                        Resources.Registry_value_not_found_ + "\n" + 
+                        Path.Combine(WindowsThemeRegestryKeyName, WindowsThemeRegistryValueName));
                 }
             }
         }
@@ -199,33 +199,33 @@ namespace VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Logic
                     ApplyTheme(themeToSwitchTo);
                 }
             }
-            catch (ArgumentNullException argumentNullException)
+            catch (ArgumentNullException e)
             {
                 VsShellUtilities.ShowMessageBox(
                     ServiceProvider.GlobalProvider,
                     Resources.Please_go_to_Tools_Options_Auto_Theme_Switcher_for_Win10_and_check_the_settings_ + "\n\n"
-                    + Resources.Exception_ + "\n" + argumentNullException.Message,
+                    + Resources.Exception_ + "\n" + e.Message,
                     Resources.Auto_Theme_Switcher_for_Win10_Dark_Mode_extension_,
                     OLEMSGICON.OLEMSGICON_INFO,
                     OLEMSGBUTTON.OLEMSGBUTTON_OK,
                     OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST);
             }
-            catch (NotSupportedException notSupportedException)
+            catch (NotSupportedException e)
             {
                 VsShellUtilities.ShowMessageBox(
                     ServiceProvider.GlobalProvider,
                     Resources.This_extension_requires_Windows_10_Build_14393_or_above_ + "\n\n"
-                    + Resources.Exception_ + "\n" + notSupportedException.Message,
+                    + Resources.Exception_ + "\n" + e.Message,
                     Resources.Auto_Theme_Switcher_for_Win10_Dark_Mode_extension_error_,
                     OLEMSGICON.OLEMSGICON_CRITICAL,
                     OLEMSGBUTTON.OLEMSGBUTTON_OK,
                     OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST);
             }
-            catch (Exception exception)
+            catch (Exception e)
             {
                 VsShellUtilities.ShowMessageBox(
                     ServiceProvider.GlobalProvider,
-                    Resources.Exception_ + "\n" + exception.Message,
+                    Resources.Exception_ + "\n" + e.Message,
                     Resources.Auto_Theme_Switcher_for_Win10_Dark_Mode_extension_error_,
                     OLEMSGICON.OLEMSGICON_CRITICAL,
                     OLEMSGBUTTON.OLEMSGBUTTON_OK,
