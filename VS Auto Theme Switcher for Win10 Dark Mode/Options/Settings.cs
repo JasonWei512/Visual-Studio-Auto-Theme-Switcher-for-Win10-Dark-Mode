@@ -24,19 +24,23 @@ namespace VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Options
 
         /// <summary>Theme switcher options.</summary>
         /// <exception cref="InvalidOperationException">Occurs when the settings class has not been initialized yet.</exception>
-        internal static IThemeSwitcherOptions ThemeSwitcherOptions
-        {
-            get
-            {
-                if (thisPackage == null)
-                {
-                    throw new InvalidOperationException("The settings class has not been initialized yet.");
-                }
+        internal static IThemeSwitcherOptions ThemeSwitcherOptions => GetOptions<ThemeSwitcherOptionsDialogPage>();
 
-                var optionsPage = (ThemeSwitcherOptionsDialogPage)thisPackage.GetDialogPage(typeof(ThemeSwitcherOptionsDialogPage));
-                optionsPage.LoadSettingsFromStorage();
-                return optionsPage;
+        /// <summary>
+        /// Get the dialog page <typeparamref name="T"/> with settings loaded from storage.
+        /// </summary>
+        /// <typeparam name="T">The dialog page type to get.</typeparam>
+        /// <returns>The dialog page <typeparamref name="T"/> with settings loaded from storage.</returns>
+        private static T GetOptions<T>() where T : DialogPage
+        {
+            if (thisPackage == null)
+            {
+                throw new InvalidOperationException("The settings class has not been initialized yet.");
             }
+
+            T optionsPage = thisPackage.GetDialogPage(typeof(T)) as T;
+            optionsPage.LoadSettingsFromStorage();
+            return optionsPage;
         }
     }
 }
