@@ -97,7 +97,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Sun and Moon.png">
+    <Content Include="Assets\SunAndMoon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
