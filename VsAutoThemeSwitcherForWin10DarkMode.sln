@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VsAutoThemeSwitcherForWin10DarkMode", "VS Auto Theme Switcher for Win10 Dark Mode\VsAutoThemeSwitcherForWin10DarkMode.csproj", "{AE41DB0F-2C4D-4B36-AE6F-521FC422AE05}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VsAutoThemeSwitcherForWin10DarkMode", "VsAutoThemeSwitcherForWin10DarkMode\VsAutoThemeSwitcherForWin10DarkMode.csproj", "{AE41DB0F-2C4D-4B36-AE6F-521FC422AE05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
