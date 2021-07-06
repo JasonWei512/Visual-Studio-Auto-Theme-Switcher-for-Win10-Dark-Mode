@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,9 +8,9 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Data;
-using VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Logic;
+using VsAutoThemeSwitcherForWin10DarkMode.Logic;
 
-namespace VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Options
+namespace VsAutoThemeSwitcherForWin10DarkMode.Options
 {
     /// <summary>The options dialog page of the Theme Switcher extension.</summary>
     public class ThemeSwitcherOptionsDialogPage : UIElementDialogPage,

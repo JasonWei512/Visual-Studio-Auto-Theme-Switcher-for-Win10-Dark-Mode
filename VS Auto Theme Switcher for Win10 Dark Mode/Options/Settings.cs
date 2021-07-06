@@ -1,9 +1,9 @@
-﻿using VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Logic;
-using VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Options;
+using VsAutoThemeSwitcherForWin10DarkMode.Logic;
+using VsAutoThemeSwitcherForWin10DarkMode.Options;
 using Microsoft.VisualStudio.Shell;
 using System;
 
-namespace VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Options
+namespace VsAutoThemeSwitcherForWin10DarkMode.Options
 {
     /// <summary>
     /// Provides extension settings.

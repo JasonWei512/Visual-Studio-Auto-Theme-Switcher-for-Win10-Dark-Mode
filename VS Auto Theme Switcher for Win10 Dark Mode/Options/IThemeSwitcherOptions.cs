@@ -1,4 +1,4 @@
-﻿namespace VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Options
+namespace VsAutoThemeSwitcherForWin10DarkMode.Options
 {
     /// <summary>Provides acces to all options for the extension.</summary>
     internal interface IThemeSwitcherOptions

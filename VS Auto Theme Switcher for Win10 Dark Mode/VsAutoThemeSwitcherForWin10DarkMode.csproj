@@ -14,8 +14,8 @@
     <ProjectGuid>{AE41DB0F-2C4D-4B36-AE6F-521FC422AE05}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VS_Auto_Theme_Switcher_for_Win10_Dark_Mode</RootNamespace>
-    <AssemblyName>VS Auto Theme Switcher for Win10 Dark Mode</AssemblyName>
+    <RootNamespace>VsAutoThemeSwitcherForWin10DarkMode</RootNamespace>
+    <AssemblyName>VsAutoThemeSwitcherForWin10DarkMode</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <UseCodebase>true</UseCodebase>
@@ -69,7 +69,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.zh-Hans.resx</DependentUpon>
     </Compile>
-    <Compile Include="VS_Auto_Theme_Switcher_for_Win10_Dark_ModePackage.cs" />
+    <Compile Include="VsAutoThemeSwitcherForWin10DarkModePackage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="source.extension.vsixmanifest">

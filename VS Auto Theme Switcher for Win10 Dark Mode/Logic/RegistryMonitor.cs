@@ -1,4 +1,4 @@
-﻿// Source: https://github.com/OpenXT-Extras/win-tools/blob/master/XenGuestPlugin/XenGuestPlugin/RegistryMonitor.cs
+// Source: https://github.com/OpenXT-Extras/win-tools/blob/master/XenGuestPlugin/XenGuestPlugin/RegistryMonitor.cs
 
 //
 // Copyright (c) 2013 Citrix Systems, Inc.
@@ -29,7 +29,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
 
-namespace VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Logic
+namespace VsAutoThemeSwitcherForWin10DarkMode.Logic
 {
     //https://github.com/OpenXT-Extras/win-tools/blob/master/XenGuestPlugin/XenGuestPlugin/RegistryMonitor.cs
     public class RegistryMonitor : IDisposable

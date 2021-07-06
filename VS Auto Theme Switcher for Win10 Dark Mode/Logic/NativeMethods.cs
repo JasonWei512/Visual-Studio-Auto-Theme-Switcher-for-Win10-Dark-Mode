@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 
-namespace VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Logic
+namespace VsAutoThemeSwitcherForWin10DarkMode.Logic
 {
     /// <summary>Provides access to native Win32 functions.</summary>
     internal static class NativeMethods

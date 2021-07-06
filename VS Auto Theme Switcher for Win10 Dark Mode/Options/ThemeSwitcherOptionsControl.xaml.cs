@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Windows.Controls;
 
-namespace VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Options
+namespace VsAutoThemeSwitcherForWin10DarkMode.Options
 {
     /// <summary>Interaction logic for ThemeSwitcherOptionsControl.xaml</summary>
     public partial class ThemeSwitcherOptionsControl : UserControl

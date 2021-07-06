@@ -1,15 +1,15 @@
-﻿using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.Win32;
 using System;
 using System.Runtime.InteropServices;
 using System.Threading;
-using VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Logic;
-using VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Options;
-using VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Properties;
+using VsAutoThemeSwitcherForWin10DarkMode.Logic;
+using VsAutoThemeSwitcherForWin10DarkMode.Options;
+using VsAutoThemeSwitcherForWin10DarkMode.Properties;
 using Task = System.Threading.Tasks.Task;
 
-namespace VS_Auto_Theme_Switcher_for_Win10_Dark_Mode
+namespace VsAutoThemeSwitcherForWin10DarkMode
 {
     /// <summary>
     /// This is the class that implements the package exposed by this assembly.
@@ -32,7 +32,7 @@ namespace VS_Auto_Theme_Switcher_for_Win10_Dark_Mode
     [ProvideAutoLoad(UIContextGuids80.NoSolution, PackageAutoLoadFlags.BackgroundLoad)]
     [ProvideAutoLoad(UIContextGuids80.SolutionExists, PackageAutoLoadFlags.BackgroundLoad)]
     [ProvideOptionPage(typeof(ThemeSwitcherOptionsDialogPage), "Auto Theme Switcher for Win10", "General", 100, 101, false)]
-    public sealed class VS_Auto_Theme_Switcher_for_Win10_Dark_ModePackage : AsyncPackage
+    public sealed class VsAutoThemeSwitcherForWin10DarkModePackage : AsyncPackage
     {
         #region Package Members
 

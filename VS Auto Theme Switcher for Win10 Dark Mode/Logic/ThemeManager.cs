@@ -1,4 +1,4 @@
-﻿using EnvDTE;
+using EnvDTE;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.Win32;
@@ -7,10 +7,10 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Options;
-using VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Properties;
+using VsAutoThemeSwitcherForWin10DarkMode.Options;
+using VsAutoThemeSwitcherForWin10DarkMode.Properties;
 
-namespace VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Logic
+namespace VsAutoThemeSwitcherForWin10DarkMode.Logic
 {
     /// <summary>Provides methods to manage installed Visual Studio themes.</summary>
     internal static class ThemeManager

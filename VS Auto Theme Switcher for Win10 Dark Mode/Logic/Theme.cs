@@ -1,6 +1,6 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 
-namespace VS_Auto_Theme_Switcher_for_Win10_Dark_Mode.Logic
+namespace VsAutoThemeSwitcherForWin10DarkMode.Logic
 {
     /// <summary>Represents a Visual Studio theme.</summary>
     [DebuggerDisplay("{DisplayName}")]
