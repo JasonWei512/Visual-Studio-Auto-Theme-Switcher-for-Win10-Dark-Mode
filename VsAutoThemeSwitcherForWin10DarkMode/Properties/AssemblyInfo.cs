@@ -1,15 +1,15 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("VS_Auto_Theme_Switcher_for_Win10_Dark_Mode")]
+[assembly: AssemblyTitle("VsAutoThemeSwitcherForWin10DarkMode")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("VS_Auto_Theme_Switcher_for_Win10_Dark_Mode")]
+[assembly: AssemblyProduct("VsAutoThemeSwitcherForWin10DarkMode")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
