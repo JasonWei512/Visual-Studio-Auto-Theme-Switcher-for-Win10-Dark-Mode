@@ -1,4 +1,5 @@
 using EnvDTE;
+using EnvDTE80;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.Win32;
@@ -26,12 +27,12 @@ namespace VsAutoThemeSwitcherForWin10DarkMode.Logic
         #region Properties
 
         /// <summary>Gets the DTE automation object.</summary>
-        private static DTE Dte
+        private static DTE2 Dte2
         {
             get
             {
                 ThreadHelper.ThrowIfNotOnUIThread();
-                return (DTE)Package.GetGlobalService(typeof(DTE));
+                return (DTE2)Package.GetGlobalService(typeof(DTE));
             }
         }
 
@@ -71,7 +72,7 @@ namespace VsAutoThemeSwitcherForWin10DarkMode.Logic
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            string registryPath = Dte.RegistryRoot + "_Config\\Themes";
+            string registryPath = Dte2.RegistryRoot + "_Config\\Themes";
             var themes = new List<Theme>();
             string[] installedThemesKeys;
             object themeName;
@@ -108,7 +109,7 @@ namespace VsAutoThemeSwitcherForWin10DarkMode.Logic
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            string keyName = string.Format(CultureInfo.InvariantCulture, @"{0}\ApplicationPrivateSettings\Microsoft\VisualStudio", Dte.RegistryRoot);
+            string keyName = string.Format(CultureInfo.InvariantCulture, @"{0}\ApplicationPrivateSettings\Microsoft\VisualStudio", Dte2.RegistryRoot);
             IEnumerable<Theme> allThemes = GetInstalledThemes();
             Theme result = null;
             string storedSetting;
@@ -162,7 +163,7 @@ namespace VsAutoThemeSwitcherForWin10DarkMode.Logic
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            string keyName = string.Format(CultureInfo.InvariantCulture, @"{0}\ApplicationPrivateSettings\Microsoft\VisualStudio", Dte.RegistryRoot);
+            string keyName = string.Format(CultureInfo.InvariantCulture, @"{0}\ApplicationPrivateSettings\Microsoft\VisualStudio", Dte2.RegistryRoot);
 
             if (theme == null)
             {
