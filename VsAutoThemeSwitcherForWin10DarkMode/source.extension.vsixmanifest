@@ -5,7 +5,7 @@
     <DisplayName>Auto Theme Switcher for Win10 Dark Mode</DisplayName>
     <Description xml:space="preserve">Automatically change your Visual Studio theme when switching Windows 10 light/dark theme.</Description>
     <MoreInfo>https://marketplace.visualstudio.com/items?itemName=NickJohn.AutoThemeSwitcherForWin10DarkMode</MoreInfo>
-    <Icon>Assets\Sun and Moon.png</Icon>
+    <Icon>Assets\SunAndMoon.png</Icon>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0,17.0)" />
