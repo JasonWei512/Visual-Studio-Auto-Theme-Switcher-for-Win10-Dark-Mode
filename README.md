@@ -8,7 +8,13 @@ Before using, please go to "Tools" → "Options" → "Auto Theme Switcher for Wi
 
 • Windows 10 14393 or above
 
-• Visual Studio 2017 or 2019 (tested on Community edition)
+• Visual Studio 2017, 2019 or 2022 (Tested on Community edition)
+
+## Release Notes
+
+Version 0.8
+
+- Add support for Visual Studio 2022
 
 ## Acknowledgements
 
@@ -32,7 +38,13 @@ Extension Icon: https://www.flaticon.com/free-icon/sun_740879
 
 • Windows 10 14393 或更高版本
 
-• Visual Studio 2017 或 2019（在社区版上测试通过）
+• Visual Studio 2017, 2019 或 2022（在社区版上测试通过）
+
+## 发布日志
+
+### 版本 0.8
+
+- 添加 Visual Studio 2022 支持
 
 ## 致谢
 
