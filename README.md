@@ -12,7 +12,7 @@ Before using, please go to "Tools" → "Options" → "Auto Theme Switcher for Wi
 
 ## Release Notes
 
-Version 0.8
+### Version 0.8
 
 - Add support for Visual Studio 2022
 
