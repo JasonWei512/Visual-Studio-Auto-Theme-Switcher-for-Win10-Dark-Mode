@@ -26,15 +26,9 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)VSPackage.zh-Hans.resx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)Assets\SunAndMoon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Page Include="$(MSBuildThisFileDirectory)Options\ThemeSwitcherOptionsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)zh-Hans\Extension.vsixlangpack" />
   </ItemGroup>
 </Project>
