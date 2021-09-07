@@ -4,6 +4,7 @@ using Microsoft.Win32;
 using System;
 using System.Runtime.InteropServices;
 using System.Threading;
+using VsAutoThemeSwitcherForWin10DarkMode.Helpers;
 using VsAutoThemeSwitcherForWin10DarkMode.Logic;
 using VsAutoThemeSwitcherForWin10DarkMode.Options;
 using VsAutoThemeSwitcherForWin10DarkMode.Properties;
@@ -63,13 +64,10 @@ namespace VsAutoThemeSwitcherForWin10DarkMode
             }
             else
             {
-                VsShellUtilities.ShowMessageBox(
-                    this,
-                    Resources.This_extension_requires_Windows_10_Build_14393_or_above_,
+                DialogHelper.ShowMessageDialog(
                     Resources.Auto_Theme_Switcher_for_Win10_Dark_Mode_extension_error_,
-                    OLEMSGICON.OLEMSGICON_CRITICAL,
-                    OLEMSGBUTTON.OLEMSGBUTTON_OK,
-                    OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST);
+                    Resources.This_extension_requires_Windows_10_Build_14393_or_above_,
+                    OLEMSGICON.OLEMSGICON_CRITICAL);
             }
         }
 

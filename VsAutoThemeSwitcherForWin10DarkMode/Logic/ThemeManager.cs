@@ -8,23 +8,21 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using VsAutoThemeSwitcherForWin10DarkMode.Helpers;
 using VsAutoThemeSwitcherForWin10DarkMode.Options;
 using VsAutoThemeSwitcherForWin10DarkMode.Properties;
+using static System.Environment;
 
 namespace VsAutoThemeSwitcherForWin10DarkMode.Logic
 {
     /// <summary>Provides methods to manage installed Visual Studio themes.</summary>
     internal static class ThemeManager
     {
-        #region Constants
+        #region Private Members
 
         private const string WindowsThemeRegestryKeyName = @"HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize";
 
         private const string WindowsThemeRegistryValueName = "AppsUseLightTheme";
-
-        #endregion
-
-        #region Properties
 
         /// <summary>Gets the DTE automation object.</summary>
         private static DTE2 Dte2
@@ -35,6 +33,10 @@ namespace VsAutoThemeSwitcherForWin10DarkMode.Logic
                 return (DTE2)Package.GetGlobalService(typeof(DTE));
             }
         }
+
+        #endregion
+
+        #region Public Members
 
         /// <summary>Gets whether the current Windows version supports dark theme.</summary>
         /// <returns>A boolean which indicates whether the current Windows version supports dark theme.</returns>
@@ -56,15 +58,11 @@ namespace VsAutoThemeSwitcherForWin10DarkMode.Logic
                 else
                 {
                     throw new NotSupportedException(
-                        Resources.Registry_value_not_found_ + "\n" + 
+                        Resources.Registry_value_not_found_ + NewLine + 
                         Path.Combine(WindowsThemeRegestryKeyName, WindowsThemeRegistryValueName));
                 }
             }
         }
-
-        #endregion
-
-        #region Public Methods and Operators
 
         /// <summary>Gets all themes installed in Visual Studio.</summary>
         /// <returns>All themes installed in Visual Studio.</returns>
@@ -180,10 +178,10 @@ namespace VsAutoThemeSwitcherForWin10DarkMode.Logic
             }
 
             NativeMethods.SendNotifyMessage(
-              new IntPtr(NativeMethods.HWND_BROADCAST),
-              NativeMethods.WM_SYSCOLORCHANGE,
-              IntPtr.Zero,
-              IntPtr.Zero);
+                new IntPtr(NativeMethods.HWND_BROADCAST),
+                NativeMethods.WM_SYSCOLORCHANGE,
+                IntPtr.Zero,
+                IntPtr.Zero);
         }
 
         /// <summary>Applies the Visual Studio theme corresponding to the current Windows 10 light/dark theme.</summary>
@@ -202,35 +200,37 @@ namespace VsAutoThemeSwitcherForWin10DarkMode.Logic
             }
             catch (ArgumentNullException e)
             {
-                VsShellUtilities.ShowMessageBox(
-                    ServiceProvider.GlobalProvider,
-                    Resources.Please_go_to_Tools_Options_Auto_Theme_Switcher_for_Win10_and_check_the_settings_ + "\n\n"
-                    + Resources.Exception_ + "\n" + e.Message,
+                DialogHelper.ShowMessageDialog(
                     Resources.Auto_Theme_Switcher_for_Win10_Dark_Mode_extension_,
-                    OLEMSGICON.OLEMSGICON_INFO,
-                    OLEMSGBUTTON.OLEMSGBUTTON_OK,
-                    OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST);
+
+                    Resources.Please_go_to_Tools_Options_Auto_Theme_Switcher_for_Win10_and_check_the_settings_ + NewLine
+                    + NewLine
+                    + Resources.Exception_ + NewLine
+                    + e.Message,
+
+                    OLEMSGICON.OLEMSGICON_INFO);
             }
             catch (NotSupportedException e)
             {
-                VsShellUtilities.ShowMessageBox(
-                    ServiceProvider.GlobalProvider,
-                    Resources.This_extension_requires_Windows_10_Build_14393_or_above_ + "\n\n"
-                    + Resources.Exception_ + "\n" + e.Message,
+                DialogHelper.ShowMessageDialog(
                     Resources.Auto_Theme_Switcher_for_Win10_Dark_Mode_extension_error_,
-                    OLEMSGICON.OLEMSGICON_CRITICAL,
-                    OLEMSGBUTTON.OLEMSGBUTTON_OK,
-                    OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST);
+
+                    Resources.This_extension_requires_Windows_10_Build_14393_or_above_ + NewLine
+                    + NewLine
+                    + Resources.Exception_ + NewLine
+                    + e.Message,
+
+                    OLEMSGICON.OLEMSGICON_CRITICAL);
             }
             catch (Exception e)
             {
-                VsShellUtilities.ShowMessageBox(
-                    ServiceProvider.GlobalProvider,
-                    Resources.Exception_ + "\n" + e.Message,
+                DialogHelper.ShowMessageDialog(
                     Resources.Auto_Theme_Switcher_for_Win10_Dark_Mode_extension_error_,
-                    OLEMSGICON.OLEMSGICON_CRITICAL,
-                    OLEMSGBUTTON.OLEMSGBUTTON_OK,
-                    OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST);
+
+                    Resources.Exception_ + NewLine
+                    + e.Message,
+
+                    OLEMSGICON.OLEMSGICON_CRITICAL);
             }
         }
         

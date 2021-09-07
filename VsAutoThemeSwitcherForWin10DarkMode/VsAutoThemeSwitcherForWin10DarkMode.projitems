@@ -9,6 +9,7 @@
     <Import_RootNamespace>VsAutoThemeSwitcherForWin10DarkMode</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\DialogHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Logic\NativeMethods.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Logic\RegistryMonitor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Logic\Theme.cs" />
