@@ -22,7 +22,7 @@ Inspired by: https://marketplace.visualstudio.com/items?itemName=danielgjackson.
 
 Uses code from: https://marketplace.visualstudio.com/items?itemName=frankschierle.ThemeSwitcher
 
-Extension Icon: https://www.flaticon.com/free-icon/sun_740879
+Extension icon: https://www.flaticon.com/free-icon/sun_740879
 
 &nbsp;
 
