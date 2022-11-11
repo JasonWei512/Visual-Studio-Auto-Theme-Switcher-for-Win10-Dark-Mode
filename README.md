@@ -10,6 +10,14 @@ Before using, please go to "Tools" → "Options" → "Auto Theme Switcher for Wi
 
 • Visual Studio 2017, 2019 or 2022 (Tested on Community edition)
 
+## ⚠️ About Visual Studio 2022
+
+Visual Studio 2022 now has a built-in "use system theme" option.
+
+![Visual Studio 2022 built in theme settings](./.github/images/VS_2022_Built_in_Theme_Settings.png)
+
+But the default Visual Studio light theme for Windows light theme is "Blue", not "Light", and you can't change it.
+
 ## Release Notes
 
 ### Version 0.8
@@ -39,6 +47,14 @@ Extension icon: https://www.flaticon.com/free-icon/sun_740879
 • Windows 10 14393 或更高版本
 
 • Visual Studio 2017, 2019 或 2022（在社区版上测试通过）
+
+## ⚠️ 关于 Visual Studio 2022
+
+Visual Studio 2022 现在有了一个内置的 "使用系统主题" 选项。
+
+![Visual Studio 2022 built in theme settings](./.github/images/VS_2022_Built_in_Theme_Settings.png)
+
+但是 Windows 亮色主题默认对应的 Visual Studio 亮色主题是 "Blue"，不是 "Light"，并且你不能更改它。
 
 ## 发布日志
 
