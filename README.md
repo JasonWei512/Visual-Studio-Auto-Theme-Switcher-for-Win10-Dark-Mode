@@ -20,6 +20,10 @@ But the default Visual Studio light theme for Windows light theme is "Blue", not
 
 ## Release Notes
 
+### Version 1.0
+
+- Add ARM64 support for Visual Studio 2022
+
 ### Version 0.8
 
 - Add support for Visual Studio 2022
@@ -57,6 +61,10 @@ Visual Studio 2022 现在有了一个内置的 "使用系统主题" 选项。
 但是 Windows 亮色主题默认对应的 Visual Studio 亮色主题是 "Blue"，不是 "Light"，并且你不能更改它。
 
 ## 发布日志
+
+### 版本 1.0
+
+- 为 Visual Studio 2022 添加 ARM64 支持
 
 ### 版本 0.8
 
